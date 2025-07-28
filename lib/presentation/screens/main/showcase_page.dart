@@ -1,11 +1,22 @@
-
 import 'package:auto_route/annotations.dart';
 import 'package:flutter/material.dart';
+import 'package:jokita/app/const/meta-seo.dart';
 import 'package:jokita/presentation/widgets/art/mockup_widget.dart';
 
 @RoutePage()
-class ShowcasePage extends StatelessWidget {
+class ShowcasePage extends StatefulWidget {
   const ShowcasePage({super.key});
+
+  @override
+  State<ShowcasePage> createState() => _ShowcasePageState();
+}
+
+class _ShowcasePageState extends State<ShowcasePage> {
+  @override
+  void initState() {
+    super.initState();
+    MetaSeoHelper.setupDashboard(); // Ganti sesuai halaman
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +31,7 @@ class ShowcasePage extends StatelessWidget {
       MockupContent(baseColor: Colors.orange),
       MockupContent(baseColor: theme.colorScheme.error),
     ];
-    
+
     // Bungkus setiap konten dengan frame ponsel
     final List<Widget> phoneMockups = mockupContents
         .map((content) => PhoneMockupWidget(child: content))
@@ -32,7 +43,7 @@ class ShowcasePage extends StatelessWidget {
         child: Row(
           children: [
             // Kolom 1 (bergerak ke atas)
-              // Kolom 1 (bergerak ke atas)
+            // Kolom 1 (bergerak ke atas)
             Container(
               width: 200,
               height: 500,
@@ -44,7 +55,7 @@ class ShowcasePage extends StatelessWidget {
             ),
             SizedBox(width: 16),
             // Kolom 2 (bergerak ke bawah)
-              // Kolom 1 (bergerak ke atas)
+            // Kolom 1 (bergerak ke atas)
             Container(
               width: 200,
               height: 500,
@@ -56,7 +67,7 @@ class ShowcasePage extends StatelessWidget {
             ),
             SizedBox(width: 16),
             // Kolom 3 (bergerak ke atas)
-              // Kolom 1 (bergerak ke atas)
+            // Kolom 1 (bergerak ke atas)
             Container(
               width: 200,
               height: 500,

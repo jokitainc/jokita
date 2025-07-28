@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:jokita/app/const/meta-seo.dart';
 import 'package:jokita/presentation/providers/auth_state_provider.dart';
 
 @RoutePage()
@@ -16,6 +17,13 @@ class _SignUpPageState extends ConsumerState<SignUpPage> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
   String _selectedRole = 'premium'; // Default role
+
+  @override
+  void initState() {
+    super.initState();
+    MetaSeoHelper.setupSignIn();
+  }
+
 
   @override
   void dispose() {

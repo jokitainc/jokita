@@ -1,35 +1,37 @@
 {
-    "name": "jokita",
-    "short_name": "jokita",
-    "start_url": ".",
-    "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
-    "orientation": "portrait-primary",
-    "prefer_related_applications": false,
-    "icons": [
-        {
-            "src": "icons/Icon-192.png",
-            "sizes": "192x192",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-512.png",
-            "sizes": "512x512",
-            "type": "image/png"
-        },
-        {
-            "src": "icons/Icon-maskable-192.png",
-            "sizes": "192x192",
-            "type": "image/png",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/Icon-maskable-512.png",
-            "sizes": "512x512",
-            "type": "image/png",
-            "purpose": "maskable"
-        }
-    ]
+  "name": "Jokita - Platform Joki Tugas & Profesional Assistant",
+  "short_name": "Jokita",
+  "display": "standalone",
+  "lang": "id-ID",
+  "scope": "/",
+  "start_url": ".",
+  "background_color": "#0175C2",
+  "theme_color": "#0175C2",
+  "description": "Jokita adalah sebuah platform berbasis Flutter yang dirancang untuk membantu para profesional dan pelaku jasa tugas (task assistance) dalam menyelesaikan berbagai kebutuhan klien secara efisien, cepat, dan terorganisir.\n\nDengan antarmuka yang clean dan pengalaman pengguna yang seamless, Jokita hadir sebagai one-stop solution bagi para joki tugas dan klien yang membutuhkan bantuan—mulai dari pekerjaan akademik hingga tugas-tugas profesional lainnya.\n\nDidukung dengan berbagai fitur dan tools yang mendukung produktivitas, Jokita bukan sekadar alat bantu, tapi juga partner kerja digital yang siap mendongkrak efisiensi dan kualitas output.\nIntinya: praktis, powerful, dan siap bantu kamu ngerjain tugas dengan hasil maksimal.",
+  "orientation": "portrait-primary",
+  "prefer_related_applications": false,
+  "icons": [
+    {
+      "src": "icons/Icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/Icon-maskable-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/Icon-maskable-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
 }

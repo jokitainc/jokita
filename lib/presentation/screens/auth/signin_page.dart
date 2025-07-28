@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_secure_storage/flutter_secure_storage.dart';
+import 'package:jokita/app/const/meta-seo.dart';
 import 'package:jokita/presentation/providers/auth_state_provider.dart';
 final storage = FlutterSecureStorage();
 @RoutePage()
@@ -20,6 +21,7 @@ class _SignInPageState extends ConsumerState<SignInPage> {
   @override
   void initState() {
     super.initState();
+    MetaSeoHelper.setupSignIn();
     _loadToken();
   }
 

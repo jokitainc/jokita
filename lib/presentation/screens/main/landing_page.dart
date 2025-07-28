@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:jokita/app/const/meta-seo.dart';
 import 'package:jokita/app/theme/colors_theme.dart';
 import 'package:jokita/presentation/widgets/art/mockup_widget.dart';
 import 'package:jokita/presentation/widgets/global/footer_widget.dart';
@@ -9,8 +10,19 @@ import 'package:jokita/presentation/widgets/global/navbar_widget.dart';
 import 'package:jokita/presentation/widgets/section/wave_divider_widget.dart';
 
 @RoutePage()
-class LandingPage extends StatelessWidget {
+class LandingPage extends StatefulWidget {
   const LandingPage({super.key});
+
+  @override
+  State<LandingPage> createState() => _LandingPageState();
+}
+
+class _LandingPageState extends State<LandingPage> {
+  @override
+  void initState() {
+    super.initState();
+    MetaSeoHelper.setupLanding();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -22,12 +34,12 @@ class LandingPage extends StatelessWidget {
       MockupContent(baseColor: AppColors.secondary30),
       MockupContent(baseColor: AppColors.primary20),
     ];
-    
+
     // Bungkus setiap konten dengan frame ponsel
     final List<Widget> phoneMockups = mockupContents
         .map((content) => PhoneMockupWidget(child: content))
         .toList();
-        
+
     return LayoutWidget(
       appBar: const NavbarWidget(),
       drawer: const AppDrawer(),
@@ -54,7 +66,10 @@ class LandingPage extends StatelessWidget {
                     width: MediaQuery.of(context).size.width,
                     margin: const EdgeInsets.symmetric(horizontal: 5.0),
                     decoration: const BoxDecoration(color: Colors.amber),
-                    child: Text('text $i', style: const TextStyle(fontSize: 16.0)),
+                    child: Text(
+                      'text $i',
+                      style: const TextStyle(fontSize: 16.0),
+                    ),
                   );
                 },
               );
@@ -95,7 +110,10 @@ class LandingPage extends StatelessWidget {
                       child: InfiniteScrollingColumn(
                         scrollUp: true,
                         duration: const Duration(seconds: 100),
-                        children: phoneMockups.sublist(0, phoneMockups.length - 1),
+                        children: phoneMockups.sublist(
+                          0,
+                          phoneMockups.length - 1,
+                        ),
                       ),
                     ),
                   ],
